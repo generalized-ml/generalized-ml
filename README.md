@@ -1,4 +1,9 @@
-- 👋 Hi, I’m @generalized-ml
+
+<p align="center">
+  Hi Folks, I am Raghav Sharma
+</p>
+
+------
 - 👀 This can be your home page for learning ML basics
 - Also, creating a directory for LLMs and Agentic solution
 
