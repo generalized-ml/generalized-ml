@@ -8,16 +8,19 @@
 
 ## 🛠️ Skills & Tech Stack
 
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white&style=flat)
-![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white&style=flat)
-![NumPy](https://img.shields.io/badge/-NumPy-013243?logo=numpy&logoColor=white&style=flat)
-![Scikit-learn](https://img.shields.io/badge/-Scikit--Learn-F7931E?logo=scikit-learn&logoColor=white&style=flat)
-![Deep Learning](https://img.shields.io/badge/-Deep%20Learning-FF6F00?style=flat)
-![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?logo=tensorflow&logoColor=white&style=flat)
-![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white&style=flat)
-![LLMs](https://img.shields.io/badge/-LLMs-00BFFF?style=flat)
-![RAG](https://img.shields.io/badge/-RAG%20Systems-FF1493?style=flat)
-![SQL](https://img.shields.io/badge/-SQL-336791?logo=postgresql&logoColor=white&style=flat)
+![Python](https://img.shields.io/badge/Python-Expert-brightgreen)
+![Pandas](https://img.shields.io/badge/Pandas-Expert-brightgreen)
+![NumPy](https://img.shields.io/badge/NumPy-Advanced-brightgreen)
+![Scikit--learn](https://img.shields.io/badge/Scikit--Learn-Expert-brightgreen)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-Expert-brightgreen)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Expert-brightgreen)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Advanced-green)
+![PyTorch](https://img.shields.io/badge/PyTorch-Advanced-green)
+![SQL](https://img.shields.io/badge/SQL-Intermediate-yellow)
+
+![LangChain](https://img.shields.io/badge/LangChain-Learning-blue)
+![RAG](https://img.shields.io/badge/RAG-Learning-blue)
+![LLMs](https://img.shields.io/badge/LLMs-Learning-blue)
 
 ---
 
