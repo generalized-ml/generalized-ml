@@ -1,3 +1,17 @@
+# 👋 Hi, I'm Raghav Sharma
+
+🎯 **Senior Data Scientist** | **ML, Python, GenAI**  
+📍 India | 📞 +91-8890346578 | 📧 [raghav.sharma481@gmail.com](mailto:raghav.sharma481@gmail.com)  
+🌐 GitHub: [generalized-ml](https://github.com/generalized-ml) | 💼 LinkedIn: [raghav-sharma-iisc](https://linkedin.com/in/raghav-sharma-iisc)
+
+---
+
+## 🧾 Summary
+
+Data Science professional with 5 years of experience across finance and healthcare.  
+Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**, and **Scalable Model Deployment**, with a proven track record of improving **speed**, **accuracy**, and **scalability** of AI systems.
+
+---
 ## 🚀 What I'm Working On
 - Building intuitive resources for **LLMs & agentic architectures**
 - Sharing notebooks and concepts on **ML & DL foundations**
