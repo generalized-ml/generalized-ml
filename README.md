@@ -8,19 +8,18 @@
 
 ## 🛠️ Skills & Tech Stack
 
-![Python](https://img.shields.io/badge/Python-Expert-brightgreen)
-![Pandas](https://img.shields.io/badge/Pandas-Expert-brightgreen)
-![NumPy](https://img.shields.io/badge/NumPy-Advanced-brightgreen)
-![Scikit--learn](https://img.shields.io/badge/Scikit--Learn-Expert-brightgreen)
-![Deep Learning](https://img.shields.io/badge/Deep%20Learning-Expert-brightgreen)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Expert-brightgreen)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-Advanced-green)
-![PyTorch](https://img.shields.io/badge/PyTorch-Advanced-green)
-![SQL](https://img.shields.io/badge/SQL-Intermediate-yellow)
-
-![LangChain](https://img.shields.io/badge/LangChain-Learning-blue)
-![RAG](https://img.shields.io/badge/RAG-Learning-blue)
-![LLMs](https://img.shields.io/badge/LLMs-Learning-blue)
+**Python**           [██████████] 100%  
+**Pandas**           [██████████] 100%  
+**NumPy**            [█████████░] 90%  
+**Scikit-learn**     [██████████] 100%  
+**Deep Learning**    [██████████] 100%  
+**Machine Learning** [██████████] 100%  
+**TensorFlow**       [████████░░] 85%  
+**PyTorch**          [████████░░] 85%  
+**SQL**              [███████░░░] 70%  
+**LangChain**        [████░░░░░░] 40% (Learning)  
+**RAG**              [███░░░░░░░] 30% (Learning)  
+**LLMs**             [████░░░░░░] 40% (Learning)  
 
 ---
 
