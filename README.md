@@ -1,5 +1,3 @@
----
-
 ## 🚀 What I'm Working On
 - Building intuitive resources for **LLMs & agentic architectures**
 - Sharing notebooks and concepts on **ML & DL foundations**
@@ -7,8 +5,6 @@
 
 > I know I can’t be Andrej Karpathy,  
 > but if I can help someone learn or build better, I’ll consider it a win. 🙌
-
----
 
 ## 🛠️ Skills & Tech Stack
 
