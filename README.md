@@ -1,8 +1,8 @@
 # 👋 Hi, I'm Raghav Sharma
 
-🎯 **Senior Data Scientist** | **ML, Python, GenAI**  
-📍 India | 📞 +91-8890346578 | 📧 [raghav.sharma481@gmail.com](mailto:raghav.sharma481@gmail.com)  
-🌐 GitHub: [generalized-ml](https://github.com/generalized-ml) | 💼 LinkedIn: [raghav-sharma-iisc](https://linkedin.com/in/raghav-sharma-iisc)
+**Senior Data Scientist** | **ML, Python, GenAI**  
+India | 📞 +91-8890346578 | 📧 [raghav.sharma481@gmail.com](mailto:raghav.sharma481@gmail.com)  
+GitHub: [generalized-ml](https://github.com/generalized-ml) | 💼 LinkedIn: [raghav-sharma-iisc](https://linkedin.com/in/raghav-sharma-iisc)
 
 ---
 
@@ -12,7 +12,7 @@ Data Science professional with 5 years of experience across finance and healthca
 Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**, and **Scalable Model Deployment**, with a proven track record of improving **speed**, **accuracy**, and **scalability** of AI systems.
 
 ---
-## 🚀 What I'm Working On
+## What I'm Working On
 - Building intuitive resources for **LLMs & agentic architectures**
 - Sharing notebooks and concepts on **ML & DL foundations**
 - Contributing back to the community with practical examples and insights
@@ -20,7 +20,7 @@ Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**,
 > I know I can’t be Andrej Karpathy,  
 > but if I can help someone learn or build better, I’ll consider it a win. 🙌
 
-## 🛠️ Skills & Tech Stack
+## Skills & Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-Expert-brightgreen)
 ![Pandas](https://img.shields.io/badge/Pandas-Expert-brightgreen)
@@ -38,7 +38,7 @@ Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**,
 
 ---
 
-## 📫 Let's Connect
+## Let's Connect
 
 If you want to collaborate or just geek out over AI, drop me a line:  
 📧 **raghav.sharma481@gmail.com**
