@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Raghav Sharma
 
 **Senior Data Scientist** | **ML, Python, GenAI**  
-India | 📞 +91-8890346578 | 📧 [raghav.sharma481@gmail.com](mailto:raghav.sharma481@gmail.com)  
+India | 📞 +91-889XXXXX78 | 📧 [raghav.sharma481@gmail.com](mailto:raghav.sharma481@gmail.com)  
 GitHub: [generalized-ml](https://github.com/generalized-ml) | 💼 LinkedIn: [raghav-sharma-iisc](https://linkedin.com/in/raghav-sharma-iisc)
 
 ---
