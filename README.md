@@ -14,8 +14,8 @@ Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**,
 ---
 ## What I'm Working On
 - Building intuitive resources for **LLMs & agentic architectures** <br>
-  - My First Pandas Agent which can interact with pandas dataframe - generalized-ml/Pandas-Agent
-  - My First Flight Fare agent - ./learning_algos/Agentic_AI_with_langchain/
+  - My First Pandas Agent which can interact with pandas dataframe [REPO](https://github.com/generalized-ml/Pandas-Agent)
+  - [My First Flight Fare agent](https://github.com/generalized-ml/generalized-ml/tree/main/learning_algos/llm/Agentic_AI_with_langchain)
 - Sharing notebooks and concepts on **ML & DL foundations**
 - Contributing back to the community with practical examples and insights
 
