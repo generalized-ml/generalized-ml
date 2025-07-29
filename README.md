@@ -17,6 +17,7 @@ Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**,
   - My First Pandas Agent which can interact with pandas dataframe [REPO](https://github.com/generalized-ml/Pandas-Agent)
   - [My First Flight Fare agent](https://github.com/generalized-ml/generalized-ml/tree/main/learning_algos/llm/Agentic_AI_with_langchain)
 - Sharing notebooks and concepts on **ML & DL foundations**
+- I have also implemented all the famous algorithms from scratch (without scikit learn or LLMs) watch out the folder - learning_algo/ml/
 - Contributing back to the community with practical examples and insights
 
 > I know I can’t be Andrej Karpathy,  
