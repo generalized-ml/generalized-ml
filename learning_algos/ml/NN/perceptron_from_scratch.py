@@ -1,7 +1,4 @@
 # creating the classifier of a moon dataset using NN from scratch 
-
-
-
 from sklearn.datasets import make_moons
 X, y = make_moons(n_samples=200, noise=0.2, random_state=42)
 def vec_dot(x1, x2):
@@ -12,6 +9,9 @@ def vec_dot(x1, x2):
 
 #nn will have two sections feedforward and backpropogation
 import random
+import math
+def sigmoid(x):
+    return 1/(1+ math.exp(-x))
 class NN():
     def __init__(self, input_shape, learning_rate):
         self.leraning_rate = learning_rate
@@ -25,11 +25,8 @@ class NN():
 
         assert len(input)== self.input_shape , 'shape not matching'
         logit  = vec_dot(input, self.weights_1 ) +  self.bais
-        if logit>0:
-            return 1
-        else:
-            return 0
 
+        return sigmoid(logit)
 
     def train(self, X_train, y, epoch):
         for e in range(epoch):
@@ -46,6 +43,7 @@ model = NN(2, learning_rate = 0.1)
 
 
 def accuracy(pred, true):
+    pred = [0 if x<0.5 else 1 for x in pred]
     return sum([1*(x==y) for x, y in zip(pred, true)])/len(true)
 
 X_test, y_test = make_moons(n_samples=20, noise=0.2, random_state=42)
@@ -57,7 +55,7 @@ print(accuracy(pred, y_test))
 
 print(model.weights_1, model.bais)   
 print("------------traiing-----------")
-model.train(X, y, 300)
+model.train(X, y, 200)
 print(model.weights_1, model.bais)   
 
 pred = []
