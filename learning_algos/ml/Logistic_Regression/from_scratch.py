@@ -16,7 +16,6 @@ y1 = np.ones(50)
 X = np.vstack((x0, x1))
 y = np.hstack((y0, y1))
 
-
 X = np.vstack((X, [[-1, 1.558],[0.8, 2.2], [-3, -0.6] ]))
 y = np.hstack((y, [0, 0, 1]))
 

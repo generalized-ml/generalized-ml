@@ -1,110 +1,219 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
 
-# dataset = [
-#     [18, 1, 0],
-#     [20, 0, 1],
-#     [23, 2, 1],
-#     [25, 1, 1],
-#     [30, 1, 0],
-# ]
-def gini_index(classes, groups ):
-    n_instances = float(sum([len(group) for group in groups]))
-    gini = [1]*len(groups)
-    for i, group in enumerate(groups):
-        score = 0
-        if len(group)==0:
-            continue
-        for class_ in classes:
-            p = ([x[-1] for x in group].count(class_))/len(group)
-            score += p*p
-        gini[i]=(gini[i] - score)*(len(group)/n_instances) ##weighted gini index 
+def plot_decision_boundary(model, X, y, resolution=200):
+    """
+    Plots the decision boundary of a model that has fit() and predict() methods.
+    
+    Parameters:
+    - model: trained model with predict() method
+    - X: numpy array of shape (n_samples, 2)
+    - y: labels array of shape (n_samples,)
+    - resolution: number of points in each grid axis
+    """
+    # Fit model
+    # model.fit(X, y)
+    
+    # Create grid over feature space
+    x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx, yy = np.meshgrid(
+        np.linspace(x_min, x_max, resolution),
+        np.linspace(y_min, y_max, resolution)
+    )
+    
+    # Predict over grid
+    Z = np.asarray(model.predict(np.c_[xx.ravel(), yy.ravel()]))
+    Z = Z.reshape(xx.shape)
+    # Plot decision boundary
+    plt.figure(figsize=(7,7))
+    plt.contourf(xx, yy, Z, alpha=0.3, cmap=plt.cm.bwr)
+    plt.scatter(X[y == 0][:, 0], X[y == 0][:, 1], c='blue', edgecolor='k', label='Class 0')
+    plt.scatter(X[y == 1][:, 0], X[y == 1][:, 1], c='red', edgecolor='k', label='Class 1')
+    plt.legend()
+    plt.title("Decision Boundary Visualization")
+    plt.grid(True)
+    plt.show()
 
-    return sum(gini)
+np.random.seed(42)
 
-def split_data(row , index , dataset):
-    groups_ = [[], []]
-    for data in dataset:
-        if data[index]>=row[index]:
-            groups_[1].append(data)
-        else:
-            groups_[0].append(data)
-    return groups_
+# ----- Class 0 -----
+# Outer horizontal blobs
+blob1 = np.random.randn(30, 2) * 0.6 + np.array([-2, 0])
+blob2 = np.random.randn(30, 2) * 0.6 + np.array([ 2, 0])
+# Extra vertical blobs
+blob3 = np.random.randn(30, 2) * 0.6 + np.array([0,  2])
+blob4 = np.random.randn(30, 2) * 0.6 + np.array([0, -2])
 
-def get_split(dataset, min_size, depth_reach):
-    classes = list(set([x[-1] for x in dataset]))
+X0 = np.vstack((blob1, blob2, blob3, blob4))
+y0 = np.zeros(X0.shape[0])
 
-    class_count = {cls : [x[-1] for x in dataset].count(cls) for cls in classes}
-    if len(dataset)==0:
+# ----- Class 1 -----
+# Central blob
+blob5 = np.random.randn(40, 2) * 0.6 + np.array([0, 0])
+# Four corner blobs
+blob6 = np.random.randn(20, 2) * 0.6 + np.array([ 2,  2])
+blob7 = np.random.randn(20, 2) * 0.6 + np.array([-2,  2])
+blob8 = np.random.randn(20, 2) * 0.6 + np.array([ 2, -2])
+blob9 = np.random.randn(20, 2) * 0.6 + np.array([-2, -2])
+
+X1 = np.vstack((blob5, blob6, blob7, blob8, blob9))
+y1 = np.ones(X1.shape[0])
+
+# Combine
+X = np.vstack((X0, X1))
+y = np.hstack((y0, y1))
+
+# # Plot
+# plt.figure(figsize=(7,7))
+# plt.scatter(X[y==0][:,0], X[y==0][:,1], c='blue', label='Class 0', edgecolor='k')
+# plt.scatter(X[y==1][:,0], X[y==1][:,1], c='red', label='Class 1', edgecolor='k')
+# plt.legend()
+# plt.title("Complex Non-Linear 2D Data with Y-axis Clusters")
+# plt.grid(True)
+# plt.show()
+
+
+
+class MyDT():
+    def __init__(self, max_depth, min_sample):
+        self. max_depth = max_depth
+        self. min_sample = min_sample
+        self.tree = {} # final aim is to build this tree diction {feature: 1, value : m left :{<same>} , right:}
+        self.input_size = None
+        self.feature_size = None
+
+
+    def gini_index(self, groups):
+
+        gini = []
+
+        for gr in groups:
+            gr_size = gr.shape[0]
+            sum_  = 0
+            if gr_size>0:
+                for t in list(set(gr[:, -1])):
+                    p = sum(gr[:, -1]==t)/gr_size
+                    sum_ = sum_+ (p**2)
+            gini.append((1- sum_)*(gr_size))
+
+        return sum(gini)
+    
+
+
+
+    def get_split(self, data, feat, value):
+        left = []
+        right = []
+        
+        for x in data:
+            if x[feat]>=value:
+                right.append(x)
+            else:
+                left.append(x)
+        return np.asarray(left), np.asarray(right)
+
+
+
+        
+    def split_data(self, x_train):
+        b_score = 999999
+        return_dict = {}
+        if x_train.shape[0]==0:
+            return -1
+        
+
+        dist_class = list(set(x_train[:, -1]))
+        if len(dist_class)==1:
+            return dist_class[0]
+        
+        if x_train.shape[0]<=self.min_sample:
+            clss_dst = 0
+            best_cls = 0
+            for clas in dist_class:
+                num = sum(x_train[:, -1]==clas)
+                if num >clss_dst:
+                    clss_dst = num
+                    best_cls = clas
+            return best_cls
+            
+
+        for feat in range(self.feature_size):
+            for value in x_train[:, feat]:
+                group = self.get_split(x_train, feat, value)
+                gini = self.gini_index(group)
+                if gini< b_score:
+                    b_score = gini
+                    left = group[0] 
+                    if left.shape[0]==0:
+                        left = -1
+                    right = group[1] 
+                    if right.shape[0]==0:
+                        right = -1
+
+                    return_dict = {"feature" : feat, "value" :value, 
+                                   "left": left, "right": right}
+                    
+
+        return return_dict
+
+
+    def build_recurse(self, tree):
+
+        try:
+            int(tree)
+        except:
+            tree["left"] = self.split_data(tree["left"])
+            tree["left"] = self.build_recurse(tree["left"])
+            
+            tree["right"] = self.split_data(tree["right"])
+            tree["right"] = self.build_recurse(tree["right"])
+        
+        return tree
+
+
+
+    def fit(self, X, y):
+        self.input_size = X.shape[0]
+        self.feature_size =  X.shape[1]
+        y = y.reshape(self.input_size, 1)
+
+        X = np.concatenate((X, y), axis = 1)
+        tree  = self.split_data(X)
+        self.tree = self.build_recurse(tree)
+        
+    def pred_recursive(self, dict_, inp):
+        try:
+            int(dict_)
+            return dict_
+        except:
+            if inp[dict_["feature"]]>=dict_["value"]:
+                return self.pred_recursive(dict_["right"], inp)
+            else:
+                return self.pred_recursive(dict_["left"], inp)
+        
         return None
-    if (len(dataset)<=min_size) or depth_reach:
-        return max(class_count, key = class_count.get)
-    if len(classes)==1:
-        return classes[0]
-    best_score = 9999
-    for feat in range(len(dataset[0])  -1):
-
-        for row in dataset:
-            groups  = split_data(row, feat, dataset)
-            gini = gini_index(classes, groups)
-            # if gini==0:
-            #     print(groups)
-            # print(feat, row[feat], gini, best_score)
-            if gini<best_score:
-                b_index, b_value, best_score, b_groups = feat, row[feat], gini, groups
-
-    # print({'index': b_index, 'value': b_value, 'left': b_groups[0], "right" :b_groups[1]})
-    return {'index': b_index, 'value': b_value, 'left': b_groups[0], "right" :b_groups[1]}
-
-def split_recursion(split, max_depth, min_size, depth = 1):
-    depth_reach = False
-    if depth>=max_depth:
-        depth_reach = True
-    output = get_split(split["left"], min_size, depth_reach)
-    if output is None:
-        split["left"] = output
-    else:
-        try:
-            int(output)
-            split["left"] = output
-        except:
-            split["left"] = split_recursion(output, max_depth, min_size, depth+1)
-
-    output = get_split(split["right"], min_size, depth_reach)
-    if output is None:
-        split["right"] = output
-    else:
-        try:
-            int(output)
-            split["right"] = output
-        except:
-            split["right"] = split_recursion(output, max_depth, min_size, depth+1)
-
-    return split
+    
+    def predict(self, inp):
+        pred = []
+        for x in range(inp.shape[0]):
+            pred.append(self.pred_recursive(self.tree, inp[x, :]))
+        return pred
 
 
-def build_tree(dataset, max_depth, min_size = 1):
-    # i will save a tree in a dictionary 
-    #{"index" : , "value" : "left": {"index" :}, "right"}
+   
 
-    tree = get_split(dataset, min_size, False)
-
-    split_recursion(tree, max_depth, min_size)
-
-    return tree
+cls = MyDT(5, 10)
+cls.fit(X, y)
 
 
-#  Test building a tree with recursive functions
-dataset = [[2.771244718,1.784783929,0],
-           [9.728571309,1.169761413,0],
-           [3.678319846,2.81281357,0],
-           [3.961043357,2.61995032,0],
-           [2.999208922,2.209014212,0],
-           [7.497545867,3.162953546,1],
-           [9.00220326,3.339047188,1],
-           [7.444542326,0.476683375,1],
-           [10.12493903,3.234550982,1],
-           [6.642287351,3.319983761,1]]
-max_depth = 3
-min_size = 1
-tree = build_tree(dataset, max_depth, min_size)
+# print(cls.tree)
 
-print(tree)
+
+plot_decision_boundary(cls,  X, y)
+
+
+
+
