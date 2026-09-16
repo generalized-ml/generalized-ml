@@ -8,7 +8,7 @@ GitHub: [generalized-ml](https://github.com/generalized-ml) | 💼 LinkedIn: [ra
 
 ## 🧾 Summary
 
-Data Science professional with 5 years of experience across finance and healthcare.  
+Data Science professional with 6 years of experience across finance and healthcare.  
 Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**, and **Scalable Model Deployment**, with a proven track record of improving **speed**, **accuracy**, and **scalability** of AI systems.
 
 ---
