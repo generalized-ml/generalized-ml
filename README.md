@@ -16,6 +16,7 @@ Skilled in **Machine Learning**, **Generative AI**, **Time-Series Forecasting**,
 - Building intuitive resources for **LLMs & agentic architectures** <br>
   - My First Pandas Agent which can interact with pandas dataframe [REPO](https://github.com/generalized-ml/Pandas-Agent)
   - [My First Flight Fare agent](https://github.com/generalized-ml/generalized-ml/tree/main/learning_algos/llm/Agentic_AI_with_langchain)
+  - My RAG Pipeline for NEET exam, [REPO[(https://github.com/generalized-ml/ncert_rag)
 - Sharing notebooks and concepts on **ML & DL foundations**
 - I have also implemented all the famous algorithms from scratch (without scikit learn or LLMs) watch out the folder - learning_algo/ml/
 - Contributing back to the community with practical examples and insights
